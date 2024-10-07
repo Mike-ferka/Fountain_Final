@@ -2,6 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const app = express();
+
+// Allow requests from your frontend origin
+app.use(cors({
+  origin: 'https://fountaincare-hospital-limited-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true, // If you are using cookies or authorization headers
+}));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://ferkamichaelgha:xO9ZIeQon53bBgX6@mongodb-final-project.uhhhwvv.mongodb.net/?retryWrites=true&w=majority&appName=MongoDB-final-project', { useNewUrlParser: true, useUnifiedTopology: true });
@@ -17,7 +25,6 @@ const postSchema = new mongoose.Schema({
 
 const Post = mongoose.model('Post', postSchema);
 
-const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
