@@ -1,0 +1,102 @@
+/* General container for programs */
+.programs {
+  margin: 80px auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+}
+
+/* Each program block */
+.program {
+  flex-basis: 31%; /* Takes about 31% of the width for larger screens */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Image inside the program */
+.program img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Caption style for hover effect */
+.caption {
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 15, 152, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.caption img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 1024px) {
+  .programs {
+    justify-content: space-around; /* Distribute space around items */
+    gap: 15px;
+  }
+
+  .program {
+    flex-basis: 48%; /* Each program block takes 48% of the width */
+  }
+
+  .program img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+  }
+
+  .caption img {
+    width: 50px; /* Adjust the size of caption images */
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .programs {
+    flex-direction: column; /* Stack the program blocks vertically */
+    align-items: center;
+  }
+
+  .program {
+    flex-basis: 100%; /* Each program block takes full width */
+    max-width: 90%; /* Add some padding on the sides */
+    margin-bottom: 30px;
+  }
+
+  .program img {
+    width: 100%; /* Ensure the image fills the container */
+    max-width: 100%;
+  }
+
+  h5 {
+    font-size: 18px; /* Adjust font size for small screens */
+  }
+
+  p {
+    font-size: 14px; /* Adjust paragraph font size */
+  }
+
+  .btn {
+    font-size: 12px; /* Adjust button font size */
+    padding: 8px 15px; /* Adjust padding for the button */
+  }
+}
