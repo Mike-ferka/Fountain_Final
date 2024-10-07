@@ -9,7 +9,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('fountaincare-hospital-limited-backend.vercel.app/api/posts');
+        const response = await fetch('https://fountaincare-hospital-limited-backend-4ilsnanbu.vercel.app/api/posts');
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
