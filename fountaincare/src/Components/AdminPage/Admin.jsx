@@ -18,7 +18,7 @@ const Admin = () => {
     };
 
     // Post this data to the backend
-    fetch('http://localhost:5000/api/posts', {
+    fetch('https://fountaincare-hospital-limited-backend-4ilsnanbu.vercel.app/api/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
