@@ -28,7 +28,7 @@ const Footer = () => {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Fountain Care. All rights reserved.</p>
+      <p>&copy; 2024 Ferka Michael. All rights reserved.</p>
     </div>
   </footer>
   
